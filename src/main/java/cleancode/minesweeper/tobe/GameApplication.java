@@ -1,19 +1,15 @@
 package cleancode.minesweeper.tobe;
 
-import cleancode.minesweeper.tobe.GameLevel.Advanced;
-import cleancode.minesweeper.tobe.GameLevel.Beginner;
-import cleancode.minesweeper.tobe.GameLevel.GameLevel;
-import cleancode.minesweeper.tobe.GameLevel.Middle;
-import cleancode.minesweeper.tobe.config.GameConfig;
-import cleancode.minesweeper.tobe.io.ConsoleInputHandler;
-import cleancode.minesweeper.tobe.io.ConsoleOutputHandler;
-import cleancode.minesweeper.tobe.io.InputHandler;
-import cleancode.minesweeper.tobe.io.OutputHandler;
+import cleancode.minesweeper.tobe.minesweaper.Minesweeper;
+import cleancode.minesweeper.tobe.minesweaper.config.GameConfig;
+import cleancode.minesweeper.tobe.minesweaper.gameLevel.Advanced;
+import cleancode.minesweeper.tobe.minesweaper.io.ConsoleInputHandler;
+import cleancode.minesweeper.tobe.minesweaper.io.ConsoleOutputHandler;
 
 public class GameApplication {
 
     public static void main(String[] args) {
-        GameConfig gameConfig = GameConfig.of(new Middle() ,new ConsoleInputHandler() , new ConsoleOutputHandler());
+        GameConfig gameConfig = GameConfig.of(new Advanced(), new ConsoleInputHandler(), new ConsoleOutputHandler());
 
 
         Minesweeper minesweeper = new Minesweeper(gameConfig);
